@@ -3,6 +3,8 @@ def calculoIMC(a, b):
    
 resposta = 'S'
 
+alunos = []
+
 while resposta != 'N':
     aluno =  input('Digite o nome do aluno: ')
     altura = float(input('Digite a altura do aluno: '))
@@ -23,10 +25,25 @@ while resposta != 'N':
     else:
         print(f'{aluno} está com {peso}kg e tem {altura:.2f}m o IMC é : {resultado:.2f} Obesidade grau III')
 
+    listaAlunos = {
+        'aluno': aluno.upper(),
+        'peso': peso,
+        'altura':altura,
+        'imc': round(resultado, 2)
+    }
+    alunos.append(listaAlunos)
+    print('Aluno cadastrado!')
     resposta = input('Quer continuar? ').upper()
 
-print('Programa encerrado!')
-    
+print('\nPrograma encerrado!')
+
+print('\nAlunos Cadastrados:')
+
+for aluno in alunos:
+    print(f'\nAluno: {aluno['aluno']}')
+    print(f'\nPeso: {aluno['peso']}')
+    print(f'\nAltura: {aluno['altura']}')
+    print(f'\nIMC: {aluno['imc']}')
     
 
 
