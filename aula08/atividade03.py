@@ -1,9 +1,9 @@
 def calculoIMC(a, b):
     return a / (b * b)
    
-reposta = 'S'
+resposta = 'S'
 
-while reposta != 'N':
+while resposta != 'N':
     aluno =  input('Digite o nome do aluno: ')
     altura = float(input('Digite a altura do aluno: '))
     peso = float(input('Digite o peso do aluno: '))
@@ -23,8 +23,9 @@ while reposta != 'N':
     else:
         print(f'{aluno} está com {peso}kg e tem {altura:.2f}m o IMC é : {resultado:.2f} Muito abaixo do peso')
 
+    resposta = input('Quer continuar? ').upper()
 
-    resposta = input('Quer continuar? ')
+print('Programa encerrado!')
     
     
 
